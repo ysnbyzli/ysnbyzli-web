@@ -39,86 +39,23 @@ export const navItems = [
 
 export const careerItems = [
 	{
-		from: 2021,
+		from: 2024,
 		to: null,
-		title: "Software Engineer",
-		company: { name: "Defter", url: "https://birdefter.com" },
+		title: "Software Team Lead",
+		company: { name: "Paket Mutfak", url: "https://paketmutfak.com.tr" },
 		location: "Istanbul, Turkey",
 		// description: "I am currently working at my job.",
 		subRoles: [
 			{
-				from: 2019,
-				to: 2021,
+				from: 2022,
+				to: 2024,
 				title: "Full Stack Developer",
-				company: { name: "Defter", url: "https://birdefter.com" },
-				location: "Podgorica, Montenegro",
+				company: { name: "Paket Mutfak", url: "https://paketmutfak.com.tr" },
+				location: "Istanbul, Turkey",
 				description:
-					"I was responsible for the development of the company's CRM/ERP products.",
+					"I contributed to the end-to-end development of our courier and order management applications, including the integration of secure payment flows and the design of the operational logic between couriers, orders, and customers. I led the backend modernization by migrating from Flask to Litestar, introducing ORM-based data models, and adding full OpenAPI documentation. On the frontend side, I consolidated multiple standalone projects into a monorepo to unify UI/UX and eliminate version inconsistencies. I also migrated reporting processes to Apache Superset and played an active role in our infrastructure transition from AWS to GCP, containerizing services and deploying them on Kubernetes with improved CI/CD workflows.",
 			},
 		],
-	},
-	{
-		from: 2018,
-		to: 2018,
-		title: "Full Stack Developer",
-		company: { name: "90Pixel", url: "https://90pixel.com" },
-		location: "Izmir, Turkey",
-		description:
-			"I worked as a Full Stack Developer at 90Pixel for two months, after which I accepted an offer from Defter and relocated to Montenegro.",
-	},
-	{
-		from: 2017,
-		to: 2018,
-		title: "Full Stack Developer",
-		company: { name: "Freelancer", url: null },
-		location: "Izmir, Turkey",
-		description:
-			"I took a gap year to pursue my passion for freelance work. This experience allowed me to gain invaluable skills and provided the opportunity to work with a diverse range of clients.",
-	},
-	{
-		from: 2015,
-		to: 2017,
-		title: "Co Founder",
-		company: { name: "whodidthis.io", url: null },
-		location: "Izmir, Turkey",
-		description:
-			"I created usable web interfaces, front-end coding, and almost everything required to build a startup. After sharing this entrepreneurship passion for nearly 2 years, sadly my partners and I had to say goodbye to our lovely startup for now.",
-	},
-	{
-		from: 2015,
-		to: 2015,
-		title: "Frontend Developer",
-		company: { name: "Alegra Digital", url: null },
-		location: "Istanbul, Turkey",
-		description:
-			"I have 10 months of hands-on experience as a front-end developer in Alegra Digital. I quit my job there to follow my dreams: whodidthis.io",
-	},
-	{
-		from: 2012,
-		to: 2015,
-		title: "Full Stack Developer",
-		company: { name: "Efabrika", url: "https://efabrika.com" },
-		location: "Istanbul, Turkey",
-		description:
-			"I provided front end & back-end development for reputable clients such as Anadolu Agency, Turkish Airlines, etc. My responsibilities included UI, UX, and API development.",
-	},
-	{
-		from: 2012,
-		to: 2012,
-		title: "Full Stack Developer",
-		company: { name: "Atölye15", url: "https://atolye15.com" },
-		location: "Izmir, Turkey",
-		description:
-			"After working as a full stack developer for an Izmir-based company; Atölye15, I accepted the great offer from Efabrika and moved to Istanbul.",
-	},
-	{
-		from: 2010,
-		to: 2012,
-		title: "Full Stack Developer",
-		company: { name: "LMS", url: null },
-		location: "Izmir, Turkey",
-		description:
-			"I provided front end & back-end development for the company's Learning Management System for about 2 years.",
 	},
 ];
 

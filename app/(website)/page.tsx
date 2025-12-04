@@ -1,11 +1,9 @@
 import { CareerCard } from "@/components/blocks/career-card";
 import { Container } from "@/components/blocks/container";
 import { OpenSourceCard } from "@/components/blocks/opensource-card";
-import { ProjectCard } from "@/components/blocks/project-card";
 import { SectionDivider } from "@/components/blocks/section-divider";
 import { GitHubIcon, XIcon } from "@/components/blocks/social-icons";
 import { SocialLink } from "@/components/blocks/social-link";
-import { WagesoLogo } from "@/components/wageso-logo";
 import { careerItems } from "@/lib/utils";
 import { getGithubInfo, getXInfo } from "@/server/thirdparty";
 import type { Metadata } from "next";
@@ -13,7 +11,14 @@ import Link from "next/link";
 import React from "react";
 
 const currentYear = new Date().getFullYear();
-const lastPosition = currentYear - careerItems[careerItems.length - 1].from;
+
+const lastItem = careerItems[careerItems.length - 1];
+const startYear =
+	lastItem.subRoles && lastItem.subRoles.length > 0
+		? lastItem.subRoles[lastItem.subRoles.length - 1].from
+		: lastItem.from;
+
+const lastPosition = currentYear - startYear;
 
 export const metadata: Metadata = {
 	title: "Readme",
@@ -41,9 +46,9 @@ export default async function Readme() {
 		<>
 			<Container className="py-8 pb-10 px-7">
 				<h1 className="tracking-tight text-4xl sm:text-5xl">
-					Nedim Arabacı
+					Yasin Beyazlı
 					<span className="text-muted-foreground font-title font-extralight text-3xl sm:text-4xl block text-balance">
-						Software Engineer
+						Software Developer
 					</span>
 				</h1>
 				<div className="pro text-muted-foreground text-balance ps-1">
@@ -51,11 +56,11 @@ export default async function Readme() {
 						Hi <span className="text-xl">👋🏻</span>, I&apos;m currently working
 						at{" "}
 						<Link
-							href="https://birdefter.com"
+							href="https://paketmutfak.com.tr"
 							target="_blank"
 							rel="nofollow noreferrer"
 						>
-							@Defter
+							@Paket Mutfak
 						</Link>
 						.
 					</p>
@@ -65,14 +70,14 @@ export default async function Readme() {
 				</div>
 				<div className="mt-6 flex gap-6">
 					<SocialLink
-						href="https://x.com/needim"
+						href="https://x.com/beyazl_yasin"
 						aria-label="Follow on X"
 						count={xResponse.data?.public_metrics?.followers_count}
 						label="followers"
 						icon={XIcon}
 					/>
 					<SocialLink
-						href="https://github.com/needim"
+						href="https://github.com/ysnbyzli"
 						aria-label="Follow on GitHub"
 						icon={GitHubIcon}
 						count={githubFollowers}
@@ -87,12 +92,12 @@ export default async function Readme() {
 					Most recent projects and contributions.
 				</p>
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-					<ProjectCard
+					{/* <ProjectCard
 						title="Wageso"
 						icon={<WagesoLogo className="size-10" />}
 						description="Privacy-first income, expense & assets tracking app."
 						link="https://wageso.com"
-					/>
+					/> */}
 					<OpenSourceCard
 						link="https://github.com/needim"
 						contributions={last14days}
